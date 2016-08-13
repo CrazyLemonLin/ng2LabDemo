@@ -31,12 +31,9 @@
                       {{title}}
                   </a>
         </h1>
-        <h3
-        (click)="plusOne($event)"
-        [ngClass]="{subtitle: num%2 === 1}"
-        [ngStyle]="getHeaderStyle()">{{subtitle}}+{{num}}</h3>
+        <h3 (click)="plusOne($event)" [ngClass]="{subtitle: num%2 === 0}" [ngStyle]="getHeaderStyle()">{{subtitle}}+{{num}}</h3>
       </hgroup>
-      <div id="social-icons" class="pull-right social-icon" [hidden]="isHide">
+      <div id="social-icons" class="pull-right social-icon" *ngIf="num%2 === 1">
         <a href="https://www.facebook.com/will.fans" title="Will 保哥的技術交流中心" target="_blank">
           <img src="/assets/images/facebook.png">
         </a>
