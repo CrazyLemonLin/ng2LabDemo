@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'The Will Will Web !!'
   titleurl = 'http://blog.miniasp.com/';
-  keyword: string;
+  keyword_default = "test";
 
   articles = [
     {
@@ -67,9 +67,7 @@ export class AppComponent {
     }
   ];
 
-  doSearch(keyword: string) {
-    this.keyword = keyword;
-  }
+
 
   
 }

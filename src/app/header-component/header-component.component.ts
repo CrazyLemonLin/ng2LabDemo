@@ -12,6 +12,9 @@ export class HeaderComponentComponent implements OnInit {
   title :string;
   @Input()
   titleurl :string;
+  @Input()
+  keyWordFromAppComponent:string;
+
   subtitle = '記載著 Will 在網路世界的學習心得與技術分享';
   num = 10;
   isHide = false;
