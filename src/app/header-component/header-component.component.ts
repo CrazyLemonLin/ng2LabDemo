@@ -8,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponentComponent implements OnInit {
 
   title='The Will Will Web !!'
- titleurl = 'http://blog.miniasp.com/';
+  titleurl = 'http://blog.miniasp.com/';
 
   subtitle = '記載著 Will 在網路世界的學習心得與技術分享';
   num=10;
+
+  isHide = false;
+
   constructor() { }
 
   ngOnInit() {
