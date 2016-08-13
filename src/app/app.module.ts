@@ -7,11 +7,13 @@ import { HeaderComponentComponent } from './header-component/header-component.co
 import { SearchComponent } from './search/search.component';
 import { SearchService} from "./search.service";
 import { HttpModule}  from "@angular/http";
+import { ArticleComponent } from './article/article.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponentComponent,
-    SearchComponent
+    SearchComponent,
+    ArticleComponent
   ],
   imports: [
     BrowserModule,
