@@ -7,16 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
-  keyword:string;
+  keyword: string;
 
-  doSearch(event:MouseEvent	| KeyboardEvent,ele:HTMLInputElement){
-
-    if (event instanceof KeyboardEvent ) {
-      var keyboardEvent = event as KeyboardEvent;
-      if (keyboardEvent.keyCode!==13) {
-        return;
-      }
-    }
-    this.keyword=ele.value;
+  doSearch(keyword: string) {
+    this.keyword = keyword;
   }
 }
