@@ -1,7 +1,6 @@
 <app-header-component
   [title]="title"
   [titleurl]="titleurl"
-  [keyWordFromAppComponent]="outPutKeyword"
 >
 
 </app-header-component>
@@ -13,7 +12,7 @@
       <div id="ctl00_cphBody_PostList1_posts" class="posts">
 
         <!-- Article START-->
-        <article class="post" *ngFor="let item of articles; let i = index;" id="post{{i}}">
+        <article class="post" *ngFor="let item of searchSrv.articles; let i = index;" id="post{{i}}">
           <header class="post-header">
             <h2 class="post-title">
               <a [href]="item.href">{{item.title}}</a>
@@ -38,13 +37,10 @@
     <aside class="col-md-4 sidebar-wrapper">
       <div id="widgetzone_be_WIDGET_ZONE" class="widgetzone">
 
-      {{outPutKeyword}}
+     {{searchSrv.keyword}}
 
         <!-- Search START-->
-       <app-search
-       [keyword]="keyword_default"
-       (search)="outPutKeyword = $event"
-       ></app-search>
+       <app-search></app-search>
         <!-- Search END -->
 
         <div [ngSwitch]="keyword">
