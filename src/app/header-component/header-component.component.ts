@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['header-component.component.css']
 })
 export class HeaderComponentComponent implements OnInit {
-
+  title='The Will Will Web !!'
   constructor() { }
 
   ngOnInit() {
